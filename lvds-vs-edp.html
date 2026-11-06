@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LVDS vs eDP for Industrial Panels</title>
+<meta name="description" content="Embedded DisplayPort versus LVDS for industrial TFT panels - topology, cable, and where eDP fits.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">RONEN <span>DISPLAY</span> &middot; Technical Resources</div>
+    <nav><a href="https://odmlcd.com/" target="_blank" rel="noopener">odmlcd.com &#8599;</a></nav>
+  </div>
+</header>
+
+<article class="wrap">
+  <h1>LVDS vs eDP for Industrial Panels</h1>
+  <p class="meta">Reference &middot; Part of the RONEN DISPLAY technical library</p>
+  <h2>What eDP adds</h2>
+  <p>eDP (embedded DisplayPort) packets video over a 1-4 lane main link with a low-power AUX channel for config and touch. It carries higher resolution per lane than LVDS and is the default on modern laptop and SoC Silicon.</p>
+  <h2>LVDS vs eDP</h2>
+  <table><thead><tr><th>Factor</th><th>LVDS</th><th>eDP</th></tr></thead><tbody><tr><td>Lanes</td><td>Fixed pairs</td><td>1-4 scalable</td></tr><tr><td>Cable</td><td>Robust, long</td><td>Shorter, tighter</td></tr><tr><td>Ecosystem</td><td>Mature SBCs</td><td>New SoCs</td></tr></tbody></table>
+  <h2>When eDP fits industry</h2>
+  <p>For <a href="https://odmlcd.com/landings/industrial-tft-lcd-modules.html" target="_blank" rel="noopener">industrial panels</a> on a modern SoC with high resolution and a compact enclosure, eDP saves lanes and connectors. See the <a href="mipi-dsi-vs-lvds.html">MIPI vs LVDS</a> and <a href="interface-protocols.html">interface primer</a> for the full map.</p>
+
+  <div class="note">For panel-level specifications, available interfaces and long-life supply across our modules, see <a href="https://odmlcd.com/" target="_blank" rel="noopener">odmlcd.com</a>; further reading: <a href="https://odmlcd.com/solutions/tft-lcd-interfaces.html" target="_blank" rel="noopener">interface guide</a>, <a href="https://odmlcd.com/landings/industrial-tft-lcd-modules.html" target="_blank" rel="noopener">industrial TFT modules</a>. To discuss a program, contact <a href="mailto:sales@odmlcd.com">sales@odmlcd.com</a>.</div>
+
+  <a class="back" href="index.html">&larr; Back to resource library</a>
+</article>
+
+<footer>
+  <div class="wrap">
+    <div>&copy; RONEN DISPLAY &mdash; Industrial TFT LCD modules &amp; touch panels. Technical resources companion.</div>
+    <div><a href="https://odmlcd.com/" target="_blank" rel="noopener">odmlcd.com</a> &middot; <a href="mailto:sales@odmlcd.com">sales@odmlcd.com</a></div>
+  </div>
+</footer>
+</body>
+</html>

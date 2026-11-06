@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capacitive Touch Controller ICs</title>
+<meta name="description" content="What a touch controller does, multi-touch and gesture reporting, and host interface choices.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">RONEN <span>DISPLAY</span> &middot; Technical Resources</div>
+    <nav><a href="https://odmlcd.com/" target="_blank" rel="noopener">odmlcd.com &#8599;</a></nav>
+  </div>
+</header>
+
+<article class="wrap">
+  <h1>Capacitive Touch Controller ICs</h1>
+  <p class="meta">Hardware &middot; Part of the RONEN DISPLAY technical library</p>
+  <h2>What the controller does</h2>
+  <p>The controller scans the sensor matrix, rejects noise and reports coordinates. A <a href="https://odmlcd.com/landings/capacitive-touch-screen-modules.html" target="_blank" rel="noopener">capacitive touch module</a> lives or dies on controller firmware quality in noisy fields.</p>
+  <h2>Multi-touch and gestures</h2>
+  <p>Modern controllers report multiple points and basic gestures over a standard protocol. The host UI interprets them; pick a controller with a driver or HID profile your OS already supports.</p>
+  <h2>Host interface and noise</h2>
+  <p>Most report over I2C or USB. Industrial noise demands good grounding and frequency hopping - see <a href="touch-panel-integration.html">touch integration</a> and <a href="display-emi-esd-protection.html">EMI/ESD protection</a>.</p>
+
+  <div class="note">For panel-level specifications, available interfaces and long-life supply across our modules, see <a href="https://odmlcd.com/" target="_blank" rel="noopener">odmlcd.com</a>; further reading: <a href="https://odmlcd.com/landings/capacitive-touch-screen-modules.html" target="_blank" rel="noopener">capacitive touch modules</a>, <a href="https://odmlcd.com/solutions/rugged-industrial-lcd.html" target="_blank" rel="noopener">rugged industrial LCD</a>. To discuss a program, contact <a href="mailto:sales@odmlcd.com">sales@odmlcd.com</a>.</div>
+
+  <a class="back" href="index.html">&larr; Back to resource library</a>
+</article>
+
+<footer>
+  <div class="wrap">
+    <div>&copy; RONEN DISPLAY &mdash; Industrial TFT LCD modules &amp; touch panels. Technical resources companion.</div>
+    <div><a href="https://odmlcd.com/" target="_blank" rel="noopener">odmlcd.com</a> &middot; <a href="mailto:sales@odmlcd.com">sales@odmlcd.com</a></div>
+  </div>
+</footer>
+</body>
+</html>

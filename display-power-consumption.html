@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Display Power Consumption Budget</title>
+<meta name="description" content="Where display power goes, low-power modes, and how to size the supply for an industrial module.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">RONEN <span>DISPLAY</span> &middot; Technical Resources</div>
+    <nav><a href="https://odmlcd.com/" target="_blank" rel="noopener">odmlcd.com &#8599;</a></nav>
+  </div>
+</header>
+
+<article class="wrap">
+  <h1>Display Power Consumption Budget</h1>
+  <p class="meta">Hardware &middot; Part of the RONEN DISPLAY technical library</p>
+  <h2>Backlight dominates</h2>
+  <p>For most TFT modules the backlight is 70-90% of total power. Panel and controller draw little by comparison, so power tuning starts at the LED string - see <a href="led-backlight-design.html">backlight design</a>.</p>
+  <h2>Low-power modes</h2>
+  <p>Dim the backlight, drop refresh rate, or blank the panel when idle. A <a href="https://odmlcd.com/landings/wide-temperature-displays.html" target="_blank" rel="noopener">wide-temperature module</a> in a battery device benefits most from aggressive dimming and sleep.</p>
+  <h2>Sizing the supply</h2>
+  <p>Size the regulator for max backlight current plus a margin for cold-start and inrush, not the average. Undersizing causes brownouts that the controller reads as reset.</p>
+
+  <div class="note">For panel-level specifications, available interfaces and long-life supply across our modules, see <a href="https://odmlcd.com/" target="_blank" rel="noopener">odmlcd.com</a>; further reading: <a href="https://odmlcd.com/landings/industrial-tft-lcd-modules.html" target="_blank" rel="noopener">industrial TFT modules</a>, <a href="https://odmlcd.com/landings/wide-temperature-displays.html" target="_blank" rel="noopener">wide-temperature modules</a>. To discuss a program, contact <a href="mailto:sales@odmlcd.com">sales@odmlcd.com</a>.</div>
+
+  <a class="back" href="index.html">&larr; Back to resource library</a>
+</article>
+
+<footer>
+  <div class="wrap">
+    <div>&copy; RONEN DISPLAY &mdash; Industrial TFT LCD modules &amp; touch panels. Technical resources companion.</div>
+    <div><a href="https://odmlcd.com/" target="_blank" rel="noopener">odmlcd.com</a> &middot; <a href="mailto:sales@odmlcd.com">sales@odmlcd.com</a></div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RGB and SPI Interfaces for Small MCU Panels</title>
+<meta name="description" content="Parallel RGB (8080/6800) and SPI for MCU-driven small TFT panels - pin count, speed and fit.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">RONEN <span>DISPLAY</span> &middot; Technical Resources</div>
+    <nav><a href="https://odmlcd.com/" target="_blank" rel="noopener">odmlcd.com &#8599;</a></nav>
+  </div>
+</header>
+
+<article class="wrap">
+  <h1>RGB and SPI Interfaces for Small MCU Panels</h1>
+  <p class="meta">Hardware &middot; Part of the RONEN DISPLAY technical library</p>
+  <h2>Parallel RGB / 8080</h2>
+  <p>MCU parallel buses (8080/6800) write directly to the panel controller's GRAM. They are simple and fast for small panels but use many GPIOs, which gets painful above a few inches.</p>
+  <h2>SPI for low pin count</h2>
+  <p>SPI uses few wires and suits tiny <a href="https://odmlcd.com/landings/industrial-tft-lcd-modules.html" target="_blank" rel="noopener">industrial modules</a> driven by resource-limited MCUs. The trade is lower pixel throughput, so it fits static UI, not video.</p>
+  <h2>Choosing for the MCU</h2>
+  <p>Match the bus to your MCU's peripherals and available pins, then pick a controller board that speaks it. See <a href="controller-board-selection.html">controller board selection</a> and the <a href="interface-protocols.html">interface primer</a>.</p>
+
+  <div class="note">For panel-level specifications, available interfaces and long-life supply across our modules, see <a href="https://odmlcd.com/" target="_blank" rel="noopener">odmlcd.com</a>; further reading: <a href="https://odmlcd.com/solutions/tft-lcd-interfaces.html" target="_blank" rel="noopener">interface guide</a>, <a href="https://odmlcd.com/landings/industrial-tft-lcd-modules.html" target="_blank" rel="noopener">industrial TFT modules</a>. To discuss a program, contact <a href="mailto:sales@odmlcd.com">sales@odmlcd.com</a>.</div>
+
+  <a class="back" href="index.html">&larr; Back to resource library</a>
+</article>
+
+<footer>
+  <div class="wrap">
+    <div>&copy; RONEN DISPLAY &mdash; Industrial TFT LCD modules &amp; touch panels. Technical resources companion.</div>
+    <div><a href="https://odmlcd.com/" target="_blank" rel="noopener">odmlcd.com</a> &middot; <a href="mailto:sales@odmlcd.com">sales@odmlcd.com</a></div>
+  </div>
+</footer>
+</body>
+</html>
