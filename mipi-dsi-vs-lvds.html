@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MIPI DSI vs LVDS for Industrial TFT Panels</title>
+<meta name="description" content="MIPI DSI and LVDS compared for industrial TFT panels - signal type, cable length, EMI, and when each fits your design.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">RONEN <span>DISPLAY</span> &middot; Technical Resources</div>
+    <nav><a href="https://odmlcd.com/" target="_blank" rel="noopener">odmlcd.com &#8599;</a></nav>
+  </div>
+</header>
+
+<article class="wrap">
+  <h1>MIPI DSI vs LVDS for Industrial TFT Panels</h1>
+  <p class="meta">Reference &middot; Part of the RONEN DISPLAY technical library</p>
+  <h2>Signal basics</h2>
+  <p>Both interfaces move pixel data as differential pairs, but the packaging differs. <a href="https://odmlcd.com/solutions/tft-lcd-interfaces.html" target="_blank" rel="noopener">LVDS</a> is a continuous clock plus data lanes carrying raw RGB; MIPI DSI is a packetised, low-voltage serial link designed originally for mobile SoCs. For an industrial panel the practical difference is how the source board talks to the T-con board.</p>
+  <h2>Cable length and EMI</h2>
+  <table><thead><tr><th>Factor</th><th>LVDS</th><th>MIPI DSI</th></tr></thead><tbody><tr><td>Typical cable</td><td>0.5-10 m feasible</td><td>Short (board-to-board)</td></tr><tr><td>EMI care</td><td>Moderate, mature</td><td>Higher, needs shielding</td></tr><tr><td>Source needed</td><td>LVDS TX (common on SBCs)</td><td>DSI source / bridge IC</td></tr></tbody></table>
+  <h2>When to use which</h2>
+  <ul><li><strong>Long cable inside a cabinet / industrial SBC:</strong> LVDS is the safe default.</li><li><strong>Modern SoC, high resolution, tight enclosure:</strong> MIPI DSI, often via a bridge.</li><li><strong>Cost-sensitive retrofit:</strong> LVDS reuses mature driver boards.</li></ul><p>See also the <a href="interface-protocols.html">LCD interface primer</a> for RGB/SPI/eDP context.</p>
+
+  <div class="note">For panel-level specifications, available interfaces and long-life supply across our modules, see <a href="https://odmlcd.com/" target="_blank" rel="noopener">odmlcd.com</a>; further reading: <a href="https://odmlcd.com/solutions/tft-lcd-interfaces.html" target="_blank" rel="noopener">interface guide</a>, <a href="https://odmlcd.com/industrial-tft-lcd-modules.html" target="_blank" rel="noopener">industrial TFT modules</a>. To discuss a program, contact <a href="mailto:sales@odmlcd.com">sales@odmlcd.com</a>.</div>
+
+  <a class="back" href="index.html">&larr; Back to resource library</a>
+</article>
+
+<footer>
+  <div class="wrap">
+    <div>&copy; RONEN DISPLAY &mdash; Industrial TFT LCD modules &amp; touch panels. Technical resources companion.</div>
+    <div><a href="https://odmlcd.com/" target="_blank" rel="noopener">odmlcd.com</a> &middot; <a href="mailto:sales@odmlcd.com">sales@odmlcd.com</a></div>
+  </div>
+</footer>
+</body>
+</html>
