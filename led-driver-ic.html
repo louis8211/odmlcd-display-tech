@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LED Backlight Driver IC Selection</title>
+<meta name="description" content="Constant-current drive, channel matching, dimming and protection for LED backlight drivers.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">RONEN <span>DISPLAY</span> &middot; Technical Resources</div>
+    <nav><a href="https://odmlcd.com/" target="_blank" rel="noopener">odmlcd.com &#8599;</a></nav>
+  </div>
+</header>
+
+<article class="wrap">
+  <h1>LED Backlight Driver IC Selection</h1>
+  <p class="meta">Hardware &middot; Part of the RONEN DISPLAY technical library</p>
+  <h2>Constant current and topology</h2>
+  <p>LEDs need a regulated current, usually from a boost converter with a current sink per string. The driver sets brightness headroom - see <a href="led-backlight-design.html">backlight design</a>.</p>
+  <h2>Channels and dimming</h2>
+  <p>Multi-string drivers must match channel current to avoid colour banding. PWM dimming is common; pick a frequency above camera flicker and below EMI trouble.</p>
+  <h2>Thermal and protection</h2>
+  <p>Good drivers add over-temperature, over-voltage and open-string protection, tying into the <a href="display-power-consumption.html">power budget</a> and thermal path.</p>
+
+  <div class="note">For panel-level specifications, available interfaces and long-life supply across our modules, see <a href="https://odmlcd.com/" target="_blank" rel="noopener">odmlcd.com</a>; further reading: <a href="https://odmlcd.com/landings/sunlight-readable-displays.html" target="_blank" rel="noopener">sunlight-readable displays</a>, <a href="led-backlight-design.html">LED backlight design</a>. To discuss a program, contact <a href="mailto:sales@odmlcd.com">sales@odmlcd.com</a>.</div>
+
+  <a class="back" href="index.html">&larr; Back to resource library</a>
+</article>
+
+<footer>
+  <div class="wrap">
+    <div>&copy; RONEN DISPLAY &mdash; Industrial TFT LCD modules &amp; touch panels. Technical resources companion.</div>
+    <div><a href="https://odmlcd.com/" target="_blank" rel="noopener">odmlcd.com</a> &middot; <a href="mailto:sales@odmlcd.com">sales@odmlcd.com</a></div>
+  </div>
+</footer>
+</body>
+</html>

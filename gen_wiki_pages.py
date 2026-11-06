@@ -600,6 +600,304 @@ PAGES = [
         "extra": [("solutions/reliability-esd-test.html", "ESD test method"),
                   ("solutions/rugged-industrial-lcd.html", "rugged industrial LCD")],
     },
+    {
+        "slug": "ips-tn-va-panel-technology.html",
+        "title": "TFT Panel Technologies: TN, IPS and VA",
+        "description": "How TN, IPS and VA liquid-crystal modes differ in structure, contrast and fit for industrial TFT panels.",
+        "h1": "TFT Panel Technologies: TN, IPS and VA",
+        "tag": "Overview",
+        "sections": [
+            ("Three LC modes",
+             "<p>TN twists the liquid crystal 90 degrees between glass plates; IPS switches it in-plane for wide viewing; "
+             "VA tilts it vertically for deep black. Each trades cost, angle and contrast differently on "
+             + ol("landings/industrial-tft-lcd-modules.html", "industrial TFT modules") + ".</p>"),
+            ("Where each fits",
+             "<ul>"
+             "<li><strong>TN:</strong> cheapest and fastest, weaker off-axis colour - fine for simple HMIs.</li>"
+             "<li><strong>IPS:</strong> wide cone and stable colour - best where operators read from angles.</li>"
+             "<li><strong>VA:</strong> highest contrast and black level - good for dark-room UI.</li>"
+             "</ul>"
+             "<p>Match the mode to the install; see " + wk("display-viewing-angles.html", "viewing angles") + ".</p>"),
+            ("Sourcing note",
+             "<p>For long-life programs, confirm the specific cell stays available or has a qualified alternate - "
+             + ol("landings/industrial-tft-lcd-modules.html", "our module range") + " covers standard industrial modes.</p>"),
+        ],
+        "extra": [("landings/industrial-tft-lcd-modules.html", "industrial TFT modules"),
+                  ("display-viewing-angles.html", "viewing angles")],
+    },
+    {
+        "slug": "display-cover-glass.html",
+        "title": "Display Cover Glass and Lens Design",
+        "description": "Strengthened glass, thickness, touch stack and surface treatment for industrial cover lenses.",
+        "h1": "Display Cover Glass and Lens Design",
+        "tag": "Hardware",
+        "sections": [
+            ("Strengthened glass",
+             "<p>Cover lenses use chemically strengthened alkali-aluminosilicate glass, where ion exchange builds a "
+             "compression layer that resists impact and scratches. A "
+             + ol("landings/capacitive-touch-screen-modules.html", "capacitive touch module")
+             + " stacks this lens above the sensor.</p>"),
+            ("Thickness and touch",
+             "<p>Lens thickness (0.7-2.0 mm) sets stiffness and touch sensitivity. Thicker glass is tougher but can "
+             "need a stronger controller; pair with " + wk("capacitive-touch-controller.html", "touch controller") + " choice.</p>"),
+            ("Surface treatment",
+             "<p>AG etching or AR film on the lens cuts glare and reflection. See "
+             + wk("anti-glare-anti-reflection.html", "AG vs AR") + " for the trade-offs.</p>"),
+        ],
+        "extra": [("landings/capacitive-touch-screen-modules.html", "capacitive touch modules"),
+                  ("anti-glare-anti-reflection.html", "AG and AR coatings")],
+    },
+    {
+        "slug": "fpc-flex-cable.html",
+        "title": "FPC and Flex Cable Design for Displays",
+        "description": "Fine-pitch flex cables, bend life, impedance and EMI for panel-to-board links.",
+        "h1": "FPC and Flex Cable Design for Displays",
+        "tag": "Hardware",
+        "sections": [
+            ("Why FPC",
+             "<p>Fine-pitch flex cable carries the parallel or serial link from the panel to the T-con and touch IC. "
+             "Its thin profile suits tight industrial bezels.</p>"),
+            ("Bend life and strain",
+             "<p>Dynamic bends need a defined bend radius and strain relief; repeated flexing fatigues the copper. "
+             "This matters as much as " + wk("display-shock-vibration.html", "shock and vibration") + " for field units.</p>"),
+            ("Impedance and EMI",
+             "<p>" + ol("solutions/tft-lcd-interfaces.html", "Display interfaces")
+             + " such as LVDS or eDP need controlled impedance; shield and ground the cable to limit pickup, as in "
+             + wk("display-emi-esd-protection.html", "EMI and ESD protection") + ".</p>"),
+        ],
+        "extra": [("solutions/tft-lcd-interfaces.html", "interface guide"),
+                  ("display-connectors-cables.html", "connectors and cables")],
+    },
+    {
+        "slug": "tcon-timing-controller.html",
+        "title": "T-Con Timing Controller Basics",
+        "description": "What a display T-Con does: input decode, row/column timing, gamma and uniformity control.",
+        "h1": "T-Con Timing Controller Basics",
+        "tag": "Reference",
+        "sections": [
+            ("What the T-Con does",
+             "<p>The timing controller receives the LVDS, eDP or MIPI stream and generates the precise row/column "
+             "drive signals, plus gamma and overdrive. It is the brain between source board and glass.</p>"),
+            ("Input formats",
+             "<p>It must match the incoming link; mismatches mean no picture. See the "
+             + wk("interface-protocols.html", "interface primer") + " and " + wk("lvds-vs-edp.html", "LVDS vs eDP") + " for the map.</p>"),
+            ("Gamma and uniformity",
+             "<p>Per-column gamma and compensation fix brightness and colour unevenness. Verify with "
+             + wk("display-test-patterns.html", "test patterns") + " at incoming inspection.</p>"),
+        ],
+        "extra": [("solutions/tft-lcd-interfaces.html", "interface guide"),
+                  ("display-test-patterns.html", "test patterns")],
+    },
+    {
+        "slug": "led-driver-ic.html",
+        "title": "LED Backlight Driver IC Selection",
+        "description": "Constant-current drive, channel matching, dimming and protection for LED backlight drivers.",
+        "h1": "LED Backlight Driver IC Selection",
+        "tag": "Hardware",
+        "sections": [
+            ("Constant current and topology",
+             "<p>LEDs need a regulated current, usually from a boost converter with a current sink per string. The driver "
+             "sets brightness headroom - see " + wk("led-backlight-design.html", "backlight design") + ".</p>"),
+            ("Channels and dimming",
+             "<p>Multi-string drivers must match channel current to avoid colour banding. PWM dimming is common; pick a "
+             "frequency above camera flicker and below EMI trouble.</p>"),
+            ("Thermal and protection",
+             "<p>Good drivers add over-temperature, over-voltage and open-string protection, tying into the "
+             + wk("display-power-consumption.html", "power budget") + " and thermal path.</p>"),
+        ],
+        "extra": [("landings/sunlight-readable-displays.html", "sunlight-readable displays"),
+                  ("led-backlight-design.html", "LED backlight design")],
+    },
+    {
+        "slug": "polarizer-film.html",
+        "title": "Polarizer Film in TFT LCDs",
+        "description": "How crossed polarizers and optical films create the image in a TFT LCD.",
+        "h1": "Polarizer Film in TFT LCDs",
+        "tag": "Fundamentals",
+        "sections": [
+            ("How polarizers work",
+             "<p>Two polarizer films sit crossed above and below the cell. The liquid crystal rotates light between them, "
+             "so voltage sets how much passes at each pixel - the basis of the image. See "
+             + wk("lcd-liquid-crystal-basics.html", "liquid-crystal basics") + ".</p>"),
+            ("Viewing angle and contrast",
+             "<p>Polarizer angle and compensation film set the viewing cone and contrast - the mechanical side of "
+             + wk("display-viewing-angles.html", "viewing angles") + ".</p>"),
+            ("Optical film stack",
+             "<p>Between the backlight and panel, diffuser, prism and reflectors shape the light; "
+             + wk("led-backlight-design.html", "backlight design") + " covers this stack.</p>"),
+        ],
+        "extra": [("display-viewing-angles.html", "viewing angles"),
+                  ("lcd-liquid-crystal-basics.html", "LC basics")],
+    },
+    {
+        "slug": "display-power-sequencing.html",
+        "title": "Display Power-On Sequencing",
+        "description": "Why power-on order matters for AVDD, VCOM and backlight, and how to avoid latch-up.",
+        "h1": "Display Power-On Sequencing",
+        "tag": "Reliability",
+        "sections": [
+            ("Why sequence matters",
+             "<p>Applying backlight or panel voltages out of order can latch the controller or stress the driver IC. A "
+             "defined ramp protects the glass and silicon.</p>"),
+            ("Typical sequence",
+             "<ul>"
+             "<li>Logic and I/O power first.</li>"
+             "<li>Then AVDD and VCOM reference.</li>"
+             "<li>Finally enable the backlight once the panel is stable.</li>"
+             "</ul>"),
+            ("Reset and brownout",
+             "<p>Hold reset low until supplies settle, and design the regulator for inrush so a brownout does not "
+             "reset mid-frame - tied to " + wk("display-power-consumption.html", "the power budget") + ".</p>"),
+        ],
+        "extra": [("solutions/rugged-industrial-lcd.html", "rugged industrial LCD"),
+                  ("display-power-consumption.html", "power consumption")],
+    },
+    {
+        "slug": "oca-optical-clear-adhesive.html",
+        "title": "OCA and Optical Bonding Adhesives",
+        "description": "Solid OCA film versus liquid loCA, index matching and process risk in optical bonding.",
+        "h1": "OCA and Optical Bonding Adhesives",
+        "tag": "Reference",
+        "sections": [
+            ("OCA vs loCA",
+             "<p>Solid OCA film and liquid optically-clear adhesive both fill the gap; loCA wets better on complex shapes "
+             "but needs careful dosing. Both remove the air interface - see " + wk("optical-bonding-explained.html", "optical bonding") + ".</p>"),
+            ("Index matching",
+             "<p>The adhesive refractive index is matched to glass and the touch stack so reflections nearly vanish, "
+             "lifting effective contrast in bright ambient.</p>"),
+            ("Process risk",
+             "<p>Bubbles and de-lamination are the failure modes; qualified process and clean rooms matter. "
+             + ol("landings/optical-bonding-displays.html", "Optically bonded displays") + " ship from controlled lines.</p>"),
+        ],
+        "extra": [("landings/optical-bonding-displays.html", "optical bonding"),
+                  ("optical-bonding-explained.html", "bonding explained")],
+    },
+    {
+        "slug": "display-rohs-reach.html",
+        "title": "RoHS, REACH and Display Compliance",
+        "description": "Substance limits, material declarations and regional scope for industrial display compliance.",
+        "h1": "RoHS, REACH and Display Compliance",
+        "tag": "Reliability",
+        "sections": [
+            ("Substance limits",
+             "<p>Regulations cap lead, cadmium, mercury and halogen content in components and packaging. Compliant cells "
+             "carry material declarations you can pass down the chain.</p>"),
+            ("Supply chain proof",
+             "<p>Keep declarations with the bill of materials so a customer audit is fast; this pairs with "
+             + wk("display-lifetime-eol-replacement.html", "EOL planning") + " for long programs.</p>"),
+            ("Regional scope",
+             "<p>EU and China RoHS plus REACH are the common bars for export; "
+             + ol("landings/industrial-tft-lcd-modules.html", "industrial modules") + " are specified to meet them.</p>"),
+        ],
+        "extra": [("landings/industrial-tft-lcd-modules.html", "industrial TFT modules"),
+                  ("display-lifetime-eol-replacement.html", "lifetime and EOL")],
+    },
+    {
+        "slug": "display-test-patterns.html",
+        "title": "Display Test Patterns and Calibration",
+        "description": "Grey-scale, dead-pixel, uniformity and colour checks used to qualify industrial panels.",
+        "h1": "Display Test Patterns and Calibration",
+        "tag": "Reference",
+        "sections": [
+            ("What patterns check",
+             "<p>Standard patterns reveal dead pixels, mura (uniformity), grey-scale steps and colour error that a "
+             "direct image hides. They are the first line of incoming inspection.</p>"),
+            ("Calibration flow",
+             "<p>The " + wk("tcon-timing-controller.html", "T-Con") + " gamma and compensation are tuned against these "
+             "patterns so every unit reads the same. Document the limits per model.</p>"),
+            ("Field service",
+             "<p>On returns, the same patterns separate a real panel fault from a system issue - see "
+             + wk("lcd-panel-failure-modes.html", "failure modes") + ".</p>"),
+        ],
+        "extra": [("lcd-panel-failure-modes.html", "failure modes"),
+                  ("tcon-timing-controller.html", "T-Con basics")],
+    },
+    {
+        "slug": "display-surge-protection.html",
+        "title": "Surge and Power Protection for Displays",
+        "description": "Transient sources and the protection stack that keeps an industrial display alive on a rough supply.",
+        "h1": "Surge and Power Protection for Displays",
+        "tag": "Reliability",
+        "sections": [
+            ("Transient sources",
+             "<p>Lightning-coupled lines, inductive load switching and hot-plug can dump high-voltage transients into the "
+             "supply. Without clamping they reach the driver IC.</p>"),
+            ("Protection stack",
+             "<ul>"
+             "<li>TVS diode at the entry to clamp surges.</li>"
+             "<li>Fuse or polyfuse for sustained faults.</li>"
+             "<li>Common-mode choke and filter for conducted noise.</li>"
+             "</ul>"
+             "See also " + wk("display-emi-esd-protection.html", "EMI and ESD protection") + ".</p>"),
+            ("Industrial supply",
+             "<p>Specify the surge rating against the site; " + ol("solutions/rugged-industrial-lcd.html", "rugged industrial LCD")
+             + " programs often qualify to a defined transient level.</p>"),
+        ],
+        "extra": [("solutions/rugged-industrial-lcd.html", "rugged industrial LCD"),
+                  ("display-emi-esd-protection.html", "EMI and ESD")],
+    },
+    {
+        "slug": "touch-firmware-calibration.html",
+        "title": "Capacitive Touch Firmware Calibration",
+        "description": "Baseline tracking, noise threshold, glove and wet modes and frequency hopping in touch firmware.",
+        "h1": "Capacitive Touch Firmware Calibration",
+        "tag": "Hardware",
+        "sections": [
+            ("Baseline and noise",
+             "<p>The controller continuously tracks a baseline and rejects noise so a real finger stands out. Firmware "
+             "quality decides stability on a noisy floor - see " + wk("capacitive-touch-controller.html", "touch controller ICs") + ".</p>"),
+            ("Glove and wet mode",
+             "<p>Raising gain and relaxing thresholds lets the sensor read through gloves or a wet screen, at some cost to "
+             "false-touch rejection. " + ol("landings/capacitive-touch-screen-modules.html", "Capacitive touch modules")
+             + " offer this as a mode.</p>"),
+            ("Frequency hopping",
+             "<p>Spreading the drive frequency dodges narrowband interference from motors and radios, part of "
+             + wk("display-emi-esd-protection.html", "EMI protection") + ".</p>"),
+        ],
+        "extra": [("landings/capacitive-touch-screen-modules.html", "capacitive touch modules"),
+                  ("capacitive-touch-controller.html", "touch controllers")],
+    },
+    {
+        "slug": "lcd-liquid-crystal-basics.html",
+        "title": "Liquid Crystal Basics for Display Engineers",
+        "description": "Alignment, twist and birefringence - the physics behind every TFT LCD pixel.",
+        "h1": "Liquid Crystal Basics for Display Engineers",
+        "tag": "Fundamentals",
+        "sections": [
+            ("Alignment and twist",
+             "<p>Alignment layers set the LC molecule direction; TN twists it 90 degrees, VA stands it vertical. The twist "
+             "is what the voltage changes to modulate light.</p>"),
+            ("Birefringence and voltage",
+             "<p>Liquid crystal is birefringent - its optical axis shifts with applied voltage, rotating polarization so the "
+             "polarizers pass more or less light. See " + wk("polarizer-film.html", "polarizer film") + ".</p>"),
+            ("Temperature effect",
+             "<p>Cold slows the molecules, raising response time and risking image freeze - why "
+             + wk("industrial-temperature-rating.html", "temperature rating") + " and heaters matter; "
+             + ol("landings/wide-temperature-displays.html", "wide-temperature modules") + " are built for it.</p>"),
+        ],
+        "extra": [("landings/wide-temperature-displays.html", "wide-temperature modules"),
+                  ("polarizer-film.html", "polarizer basics")],
+    },
+    {
+        "slug": "display-emi-shielding.html",
+        "title": "EMI Shielding for Display Assemblies",
+        "description": "ITO shield layers, conductive gaskets and shielded cans that keep an industrial display compliant.",
+        "h1": "EMI Shielding for Display Assemblies",
+        "tag": "Reliability",
+        "sections": [
+            ("Shield the right layer",
+             "<p>A thin ITO shield layer on the touch glass, a conductive gasket at the bezel, or a shielded can over the "
+             "T-con each block radiation at different points. Pick by where the noise leaves.</p>"),
+            ("Cable and connector shield",
+             "<p>Shield the " + wk("display-connectors-cables.html", "cable and connector") + " and the "
+             + wk("fpc-flex-cable.html", "FPC") + " so the link does not become an antenna; grounding at one end avoids loops.</p>"),
+            ("Verify early",
+             "<p>Pre-compliance checks catch issues before full " + wk("display-emc-standards.html", "EMC testing") + "; "
+             + ol("solutions/reliability-esd-test.html", "reliability tests") + " should include both emissions and immunity.</p>"),
+        ],
+        "extra": [("solutions/reliability-esd-test.html", "reliability test"),
+                  ("display-emc-standards.html", "EMC standards")],
+    },
 ]
 
 TPL = """<!DOCTYPE html>
@@ -644,7 +942,9 @@ def build(p):
         body += "  <h2>%s</h2>\n  %s\n" % (h2, html)
     extra = ""
     if p.get("extra"):
-        extra = "; further reading: " + ", ".join(ol(u, t) for u, t in p["extra"])
+        # slug with "/" -> odmlcd.com dofollow; bare page name -> wiki-internal link
+        parts = [ol(u, t) if "/" in u else wk(u, t) for u, t in p["extra"]]
+        extra = "; further reading: " + ", ".join(parts)
     return TPL.format(title=p["title"], description=p["description"], h1=p["h1"],
                       tag=p["tag"], body=body, root=ROOT, extra=extra, mail=MAIL)
 

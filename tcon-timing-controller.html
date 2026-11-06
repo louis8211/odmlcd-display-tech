@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>T-Con Timing Controller Basics</title>
+<meta name="description" content="What a display T-Con does: input decode, row/column timing, gamma and uniformity control.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">RONEN <span>DISPLAY</span> &middot; Technical Resources</div>
+    <nav><a href="https://odmlcd.com/" target="_blank" rel="noopener">odmlcd.com &#8599;</a></nav>
+  </div>
+</header>
+
+<article class="wrap">
+  <h1>T-Con Timing Controller Basics</h1>
+  <p class="meta">Reference &middot; Part of the RONEN DISPLAY technical library</p>
+  <h2>What the T-Con does</h2>
+  <p>The timing controller receives the LVDS, eDP or MIPI stream and generates the precise row/column drive signals, plus gamma and overdrive. It is the brain between source board and glass.</p>
+  <h2>Input formats</h2>
+  <p>It must match the incoming link; mismatches mean no picture. See the <a href="interface-protocols.html">interface primer</a> and <a href="lvds-vs-edp.html">LVDS vs eDP</a> for the map.</p>
+  <h2>Gamma and uniformity</h2>
+  <p>Per-column gamma and compensation fix brightness and colour unevenness. Verify with <a href="display-test-patterns.html">test patterns</a> at incoming inspection.</p>
+
+  <div class="note">For panel-level specifications, available interfaces and long-life supply across our modules, see <a href="https://odmlcd.com/" target="_blank" rel="noopener">odmlcd.com</a>; further reading: <a href="https://odmlcd.com/solutions/tft-lcd-interfaces.html" target="_blank" rel="noopener">interface guide</a>, <a href="display-test-patterns.html">test patterns</a>. To discuss a program, contact <a href="mailto:sales@odmlcd.com">sales@odmlcd.com</a>.</div>
+
+  <a class="back" href="index.html">&larr; Back to resource library</a>
+</article>
+
+<footer>
+  <div class="wrap">
+    <div>&copy; RONEN DISPLAY &mdash; Industrial TFT LCD modules &amp; touch panels. Technical resources companion.</div>
+    <div><a href="https://odmlcd.com/" target="_blank" rel="noopener">odmlcd.com</a> &middot; <a href="mailto:sales@odmlcd.com">sales@odmlcd.com</a></div>
+  </div>
+</footer>
+</body>
+</html>

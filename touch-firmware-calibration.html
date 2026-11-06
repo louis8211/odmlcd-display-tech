@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capacitive Touch Firmware Calibration</title>
+<meta name="description" content="Baseline tracking, noise threshold, glove and wet modes and frequency hopping in touch firmware.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">RONEN <span>DISPLAY</span> &middot; Technical Resources</div>
+    <nav><a href="https://odmlcd.com/" target="_blank" rel="noopener">odmlcd.com &#8599;</a></nav>
+  </div>
+</header>
+
+<article class="wrap">
+  <h1>Capacitive Touch Firmware Calibration</h1>
+  <p class="meta">Hardware &middot; Part of the RONEN DISPLAY technical library</p>
+  <h2>Baseline and noise</h2>
+  <p>The controller continuously tracks a baseline and rejects noise so a real finger stands out. Firmware quality decides stability on a noisy floor - see <a href="capacitive-touch-controller.html">touch controller ICs</a>.</p>
+  <h2>Glove and wet mode</h2>
+  <p>Raising gain and relaxing thresholds lets the sensor read through gloves or a wet screen, at some cost to false-touch rejection. <a href="https://odmlcd.com/landings/capacitive-touch-screen-modules.html" target="_blank" rel="noopener">Capacitive touch modules</a> offer this as a mode.</p>
+  <h2>Frequency hopping</h2>
+  <p>Spreading the drive frequency dodges narrowband interference from motors and radios, part of <a href="display-emi-esd-protection.html">EMI protection</a>.</p>
+
+  <div class="note">For panel-level specifications, available interfaces and long-life supply across our modules, see <a href="https://odmlcd.com/" target="_blank" rel="noopener">odmlcd.com</a>; further reading: <a href="https://odmlcd.com/landings/capacitive-touch-screen-modules.html" target="_blank" rel="noopener">capacitive touch modules</a>, <a href="capacitive-touch-controller.html">touch controllers</a>. To discuss a program, contact <a href="mailto:sales@odmlcd.com">sales@odmlcd.com</a>.</div>
+
+  <a class="back" href="index.html">&larr; Back to resource library</a>
+</article>
+
+<footer>
+  <div class="wrap">
+    <div>&copy; RONEN DISPLAY &mdash; Industrial TFT LCD modules &amp; touch panels. Technical resources companion.</div>
+    <div><a href="https://odmlcd.com/" target="_blank" rel="noopener">odmlcd.com</a> &middot; <a href="mailto:sales@odmlcd.com">sales@odmlcd.com</a></div>
+  </div>
+</footer>
+</body>
+</html>

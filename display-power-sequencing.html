@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Display Power-On Sequencing</title>
+<meta name="description" content="Why power-on order matters for AVDD, VCOM and backlight, and how to avoid latch-up.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">RONEN <span>DISPLAY</span> &middot; Technical Resources</div>
+    <nav><a href="https://odmlcd.com/" target="_blank" rel="noopener">odmlcd.com &#8599;</a></nav>
+  </div>
+</header>
+
+<article class="wrap">
+  <h1>Display Power-On Sequencing</h1>
+  <p class="meta">Reliability &middot; Part of the RONEN DISPLAY technical library</p>
+  <h2>Why sequence matters</h2>
+  <p>Applying backlight or panel voltages out of order can latch the controller or stress the driver IC. A defined ramp protects the glass and silicon.</p>
+  <h2>Typical sequence</h2>
+  <ul><li>Logic and I/O power first.</li><li>Then AVDD and VCOM reference.</li><li>Finally enable the backlight once the panel is stable.</li></ul>
+  <h2>Reset and brownout</h2>
+  <p>Hold reset low until supplies settle, and design the regulator for inrush so a brownout does not reset mid-frame - tied to <a href="display-power-consumption.html">the power budget</a>.</p>
+
+  <div class="note">For panel-level specifications, available interfaces and long-life supply across our modules, see <a href="https://odmlcd.com/" target="_blank" rel="noopener">odmlcd.com</a>; further reading: <a href="https://odmlcd.com/solutions/rugged-industrial-lcd.html" target="_blank" rel="noopener">rugged industrial LCD</a>, <a href="display-power-consumption.html">power consumption</a>. To discuss a program, contact <a href="mailto:sales@odmlcd.com">sales@odmlcd.com</a>.</div>
+
+  <a class="back" href="index.html">&larr; Back to resource library</a>
+</article>
+
+<footer>
+  <div class="wrap">
+    <div>&copy; RONEN DISPLAY &mdash; Industrial TFT LCD modules &amp; touch panels. Technical resources companion.</div>
+    <div><a href="https://odmlcd.com/" target="_blank" rel="noopener">odmlcd.com</a> &middot; <a href="mailto:sales@odmlcd.com">sales@odmlcd.com</a></div>
+  </div>
+</footer>
+</body>
+</html>
