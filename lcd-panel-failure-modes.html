@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LCD Panel Failure Modes</title>
+<meta name="description" content="Common industrial LCD field failures and the design choices that prevent them — for long-life TFT module programs.">
+<link rel="canonical" href="https://odmlcd.com/blog/lcd-panel-failure-modes">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">RONEN <span>DISPLAY</span> · Technical Resources</div>
+    <nav><a href="https://odmlcd.com/" target="_blank" rel="noopener">odmlcd.com ↗</a></nav>
+  </div>
+</header>
+
+<article class="wrap">
+  <h1>LCD Panel Failure Modes — and How to Avoid Them</h1>
+  <p class="meta">Reliability · Companion to <a href="https://odmlcd.com/blog/lcd-panel-failure-modes" target="_blank" rel="noopener">the article on odmlcd.com</a></p>
+
+  <p>Most industrial display returns are not "the panel died" — they are environmental or integration issues that a better specification would have prevented. Knowing the common modes protects a multi-year supply program.</p>
+
+  <h2>Common field failures</h2>
+  <table>
+    <thead><tr><th>Failure</th><th>Typical cause</th><th>Prevention</th></tr></thead>
+    <tbody>
+      <tr><td>Dim or uneven backlight</td><td>LED ageing, thermal stress</td><td>Rated brightness headroom; thermal design</td></tr>
+      <tr><td>Touch not responding in cold</td><td>Capacitive CTE mismatch</td><td><a href="https://odmlcd.com/landings/wide-temperature-displays" target="_blank" rel="noopener">Wide-temperature module</a> + rated touch</td></tr>
+      <tr><td>Image retention / burn-in</td><td>Static UI, long duty</td><td>Screen saver, IPS panel, OLED only for dynamic content</td></tr>
+      <tr><td>Delamination at the edge</td><td>Moisture ingress</td><td><a href="selection-guide.html">Optical bonding</a> + sealed bezel</td></tr>
+      <tr><td>Flicker</td><td>Interface/timing mismatch</td><td>Validated <a href="controller-board-selection.html">controller board</a></td></tr>
+    </tbody>
+  </table>
+
+  <h2>Design choices that pay off</h2>
+  <ul>
+    <li>Specify brightness with headroom so ageing stays readable.</li>
+    <li>Choose wide-temperature rating for outdoor or unheated enclosures.</li>
+    <li>Bind the touch, cover glass and LCD as one optically bonded stack.</li>
+    <li>Validate the full module + controller + firmware together, not piecemeal.</li>
+  </ul>
+
+  <div class="note">Detailed prevention guidance and component-level notes: <a href="https://odmlcd.com/blog/lcd-panel-failure-modes" target="_blank" rel="noopener">odmlcd.com/blog/lcd-panel-failure-modes</a>. For program-level reliability, see <a href="industrial-hmi-odm.html">Industrial HMI Display ODM</a>.</div>
+
+  <a class="back" href="index.html">← Back to resource library</a>
+  <p class="canon">Original article: <a href="https://odmlcd.com/blog/lcd-panel-failure-modes" target="_blank" rel="noopener">odmlcd.com/blog/lcd-panel-failure-modes</a></p>
+</article>
+
+<footer>
+  <div class="wrap">
+    <div>© RONEN DISPLAY — Industrial TFT LCD modules &amp; touch panels. Technical resources companion.</div>
+    <div><a href="https://odmlcd.com/" target="_blank" rel="noopener">odmlcd.com</a> · <a href="mailto:sales@odmlcd.com">sales@odmlcd.com</a></div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How an LCD Works: Layers, Backlight and TFT Pixels</title>
+<meta name="description" content="A practical walk through how a liquid crystal display works: backlight, polarisers, TFT pixels and colour filters, and what each layer means when you specify an industrial LCD module.">
+<link rel="canonical" href="https://odmlcd.com/blog/how-lcd-works">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">RONEN <span>DISPLAY</span> · Technical Resources</div>
+    <nav><a href="https://odmlcd.com/" target="_blank" rel="noopener">odmlcd.com ↗</a></nav>
+  </div>
+</header>
+
+<article class="wrap">
+  <h1>How an LCD Works: From Backlight to the Image You Specify</h1>
+  <p class="meta">Fundamentals · Companion to <a href="https://odmlcd.com/blog/how-lcd-works" target="_blank" rel="noopener">the article on odmlcd.com</a></p>
+
+  <p>A liquid crystal display does not emit light. It <em>controls</em> light. Understanding the stack of layers between the backlight and your eye is the fastest way to make sense of every spec on a TFT LCD module datasheet — brightness, contrast, viewing angle and response time all originate here.</p>
+
+  <h2>The layer stack, bottom to top</h2>
+  <ul>
+    <li><strong>Backlight</strong> — LEDs behind the panel provide the only light source. Brightness (nits) and uniformity are set here, not by the liquid crystals.</li>
+    <li><strong>Bottom polariser</strong> — filters the backlight into a single linear polarisation.</li>
+    <li><strong>TFT glass with liquid crystals</strong> — each pixel is a tiny cell whose crystals twist or align under voltage, rotating polarisation to control how much light passes.</li>
+    <li><strong>Colour filter (RGB sub-pixels)</strong> — three sub-pixels per pixel produce the full colour image.</li>
+    <li><strong>Top polariser</strong> — crossed relative to the bottom one, so "closed" crystals block light and "open" ones pass it.</li>
+  </ul>
+
+  <h2>What "TFT" actually drives</h2>
+  <p>A thin-film transistor sits at every pixel as a fast, stable switch. That is what gives TFT LCDs their sharpness and response time versus older passive-matrix panels. The transistor array is addressed by a timing controller (TCON) that receives the video signal from the <a href="controller-board-selection.html">controller board</a>.</p>
+
+  <h2>Why this matters when you specify</h2>
+  <table>
+    <thead><tr><th>Symptom you care about</th><th>Layer that decides it</th></tr></thead>
+    <tbody>
+      <tr><td>Too dim in sunlight</td><td>Backlight output + <a href="selection-guide.html">optical bonding</a> and surface treatment</td></tr>
+      <tr><td>Colours shift at an angle</td><td>Liquid-crystal mode (IPS vs TN) and filter alignment</td></tr>
+      <tr><td>Slow motion / ghosting</td><td>LC response time + TCON driving</td></tr>
+      <tr><td>Won't start below −20°C</td><td>Liquid-crystal behaviour at temperature — see <a href="https://odmlcd.com/landings/wide-temperature-displays" target="_blank" rel="noopener">wide-temperature modules</a></td></tr>
+    </tbody>
+  </table>
+
+  <div class="note">For a full, illustrated version with the optical-path diagrams, read the original on <a href="https://odmlcd.com/blog/how-lcd-works" target="_blank" rel="noopener">odmlcd.com/blog/how-lcd-works</a>. Datasheets for specific modules are available on request from <a href="mailto:sales@odmlcd.com">sales@odmlcd.com</a>.</div>
+
+  <a class="back" href="index.html">← Back to resource library</a>
+  <p class="canon">Original article: <a href="https://odmlcd.com/blog/how-lcd-works" target="_blank" rel="noopener">odmlcd.com/blog/how-lcd-works</a></p>
+</article>
+
+<footer>
+  <div class="wrap">
+    <div>© RONEN DISPLAY — Industrial TFT LCD modules &amp; touch panels. Technical resources companion.</div>
+    <div><a href="https://odmlcd.com/" target="_blank" rel="noopener">odmlcd.com</a> · <a href="mailto:sales@odmlcd.com">sales@odmlcd.com</a></div>
+  </div>
+</footer>
+</body>
+</html>

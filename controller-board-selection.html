@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LCD Controller Board Selection</title>
+<meta name="description" content="How to match an LCD controller / driver board to your panel, interface and target enclosure for industrial TFT modules.">
+<link rel="canonical" href="https://odmlcd.com/blog/lcd-controller-board-selection">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">RONEN <span>DISPLAY</span> · Technical Resources</div>
+    <nav><a href="https://odmlcd.com/" target="_blank" rel="noopener">odmlcd.com ↗</a></nav>
+  </div>
+</header>
+
+<article class="wrap">
+  <h1>LCD Controller Board Selection</h1>
+  <p class="meta">Hardware · Companion to <a href="https://odmlcd.com/blog/lcd-controller-board-selection" target="_blank" rel="noopener">the article on odmlcd.com</a></p>
+
+  <p>A TFT panel is dumb glass — it needs a controller board (often called a driver board or TCON-adapter) to accept a video source and drive the pixels. Choosing the wrong one means no image, wrong colours, or a board that will not fit the enclosure.</p>
+
+  <h2>Match the board to the panel interface</h2>
+  <p>The single most important check is the panel's interface: RGB, LVDS, MIPI DSI, eDP or SPI. The board must speak the same language. See the <a href="interface-protocols.html">LCD Interface Primer</a> for the differences.</p>
+
+  <h2>Decide the input you need</h2>
+  <table>
+    <thead><tr><th>Input source</th><th>Typical board</th><th>Use case</th></tr></thead>
+    <tbody>
+      <tr><td>HDMI / VGA</td><td>HDMI driver board</td><td>Standalone monitors, kiosks</td></tr>
+      <tr><td>RGB / MCU (8080/SPI)</td><td>MCU interface board</td><td>Embedded systems, small panels</td></tr>
+      <tr><td>LVDS / eDP</td><td>Converter + SBC</td><td>Industrial PCs, custom HMI</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Don't forget the mechanical fit</h2>
+  <ul>
+    <li>Board outline and mounting holes vs. your bezel/enclosure.</li>
+    <li>Inverter / backlight driver current rating matches the panel.</li>
+    <li>Operating temperature range for the components, not just the panel.</li>
+  </ul>
+
+  <div class="note">For custom HMI programs we design the controller and panel as one package — see <a href="industrial-hmi-odm.html">Industrial HMI Display ODM</a> and <a href="https://odmlcd.com/solutions/custom-odm-lcd-solutions" target="_blank" rel="noopener">custom ODM LCD solutions</a>.</div>
+
+  <a class="back" href="index.html">← Back to resource library</a>
+  <p class="canon">Original article: <a href="https://odmlcd.com/blog/lcd-controller-board-selection" target="_blank" rel="noopener">odmlcd.com/blog/lcd-controller-board-selection</a></p>
+</article>
+
+<footer>
+  <div class="wrap">
+    <div>© RONEN DISPLAY — Industrial TFT LCD modules &amp; touch panels. Technical resources companion.</div>
+    <div><a href="https://odmlcd.com/" target="_blank" rel="noopener">odmlcd.com</a> · <a href="mailto:sales@odmlcd.com">sales@odmlcd.com</a></div>
+  </div>
+</footer>
+</body>
+</html>

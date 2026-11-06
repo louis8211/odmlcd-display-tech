@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reading an Industrial LCD Datasheet</title>
+<meta name="description" content="How to read an LCD module datasheet: pinout, timing, optical specs and the mechanical drawing — and what each section tells you for integration.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">RONEN <span>DISPLAY</span> · Technical Resources</div>
+    <nav><a href="https://odmlcd.com/" target="_blank" rel="noopener">odmlcd.com ↗</a></nav>
+  </div>
+</header>
+
+<article class="wrap">
+  <h1>Reading an Industrial LCD Datasheet</h1>
+  <p class="meta">Reference · Part of the RONEN DISPLAY technical library</p>
+
+  <p>A datasheet is the contract between the module and your design. Knowing where to look saves integration weeks. This guide walks the sections that matter for industrial TFT modules.</p>
+
+  <h2>1. Absolute maximum ratings</h2>
+  <p>Voltage, temperature and storage limits. Design inside these with margin — they are not operating targets.</p>
+
+  <h2>2. Optical characteristics</h2>
+  <table>
+    <thead><tr><th>Spec</th><th>What it means for you</th></tr></thead>
+    <tbody>
+      <tr><td>Brightness (cd/m² / nits)</td><td>Need more for sunlight — see <a href="selection-guide.html">selection guide</a></td></tr>
+      <tr><td>Contrast ratio</td><td>Readability of dark content</td></tr>
+      <tr><td>Viewing angle</td><td>IPS gives wide, stable angles</td></tr>
+      <tr><td>Colour gamut</td><td>Match to your UI / camera needs</td></tr>
+    </tbody>
+  </table>
+
+  <h2>3. Electrical &amp; timing</h2>
+  <ul>
+    <li><strong>Pinout / connector</strong> — map it to your <a href="controller-board-selection.html">controller board</a>.</li>
+    <li><strong>Interface</strong> — RGB / LVDS / MIPI / eDP (see <a href="interface-protocols.html">interface primer</a>).</li>
+    <li><strong>Timing diagrams</strong> — pixel clock, H/V sync, DE; required for a clean image.</li>
+  </ul>
+
+  <h2>4. Mechanical drawing</h2>
+  <p>The outline, bezel, mounting holes and touch-stack thickness. This is what your enclosure is built around — confirm it before anything else.</p>
+
+  <div class="note">Full datasheets for specific RONEN DISPLAY modules are provided on request for qualified programs. Contact <a href="mailto:sales@odmlcd.com">sales@odmlcd.com</a> or browse modules at <a href="https://odmlcd.com/" target="_blank" rel="noopener">odmlcd.com</a>.</div>
+
+  <a class="back" href="index.html">← Back to resource library</a>
+</article>
+
+<footer>
+  <div class="wrap">
+    <div>© RONEN DISPLAY — Industrial TFT LCD modules &amp; touch panels. Technical resources companion.</div>
+    <div><a href="https://odmlcd.com/" target="_blank" rel="noopener">odmlcd.com</a> · <a href="mailto:sales@odmlcd.com">sales@odmlcd.com</a></div>
+  </div>
+</footer>
+</body>
+</html>

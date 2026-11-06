@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LCD Interface Primer: RGB, LVDS, MIPI DSI, eDP, SPI</title>
+<meta name="description" content="A practical primer on LCD interfaces — RGB, LVDS, MIPI DSI, eDP and SPI — when to use each and how they affect your industrial display design.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">RONEN <span>DISPLAY</span> · Technical Resources</div>
+    <nav><a href="https://odmlcd.com/" target="_blank" rel="noopener">odmlcd.com ↗</a></nav>
+  </div>
+</header>
+
+<article class="wrap">
+  <h1>LCD Interface Primer: RGB, LVDS, MIPI DSI, eDP, SPI</h1>
+  <p class="meta">Reference · Part of the RONEN DISPLAY technical library</p>
+
+  <p>The interface is the contract between your source (MCU, SBC, GPU) and the panel. Pick it wrong and nothing shows; pick it right and the rest of the design gets simpler. This is a practical, not exhaustive, guide.</p>
+
+  <h2>Comparison</h2>
+  <table>
+    <thead><tr><th>Interface</th><th>Signal type</th><th>Typical use</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>RGB (parallel)</td><td>Parallel TTL</td><td>Small MCU panels</td><td>Many pins; short trace length</td></tr>
+      <tr><td>SPI</td><td>Serial</td><td>Tiny low-res displays</td><td>Low bandwidth, simple</td></tr>
+      <tr><td>LVDS</td><td>Differential serial</td><td>Industrial TFT 5–15.6"</td><td>Robust, long cable, mature</td></tr>
+      <tr><td>MIPI DSI</td><td>Differential serial</td><td>Mobile/embedded, high res</td><td>Compact, needs DSI source</td></tr>
+      <tr><td>eDP</td><td>Differential serial</td><td>High-res panels, PCs</td><td>Standardised, scalable</td></tr>
+    </tbody>
+  </table>
+
+  <h2>How to choose</h2>
+  <ul>
+    <li><strong>Small embedded / MCU:</strong> RGB or SPI — keep it simple.</li>
+    <li><strong>Industrial TFT with an SBC:</strong> LVDS is the safe, long-cable default.</li>
+    <li><strong>High resolution or modern SoC:</strong> MIPI DSI or eDP.</li>
+    <li><strong>Long cable runs in a cabinet:</strong> prefer differential (LVDS/eDP) over parallel RGB.</li>
+  </ul>
+
+  <div class="note">The interface drives <a href="controller-board-selection.html">controller board selection</a>. For panel-level specs and available interfaces across our modules, see <a href="https://odmlcd.com/" target="_blank" rel="noopener">odmlcd.com</a> or contact <a href="mailto:sales@odmlcd.com">sales@odmlcd.com</a>.</div>
+
+  <a class="back" href="index.html">← Back to resource library</a>
+</article>
+
+<footer>
+  <div class="wrap">
+    <div>© RONEN DISPLAY — Industrial TFT LCD modules &amp; touch panels. Technical resources companion.</div>
+    <div><a href="https://odmlcd.com/" target="_blank" rel="noopener">odmlcd.com</a> · <a href="mailto:sales@odmlcd.com">sales@odmlcd.com</a></div>
+  </div>
+</footer>
+</body>
+</html>
